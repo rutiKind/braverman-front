@@ -37,9 +37,9 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
         run: npm install --legacy-peer-deps
+          working-directory: ./my-app
 
       - name: Build
-        working-directory: ./my-app
         run: CI=false npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
