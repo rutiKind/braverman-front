@@ -36,7 +36,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        working-directory: ./my-app
+        working-directory: ./my-app/src
         run: npm install --legacy-peer-deps
       - name: Build
         working-directory: ./my-app
