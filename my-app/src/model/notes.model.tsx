@@ -3,5 +3,6 @@ export interface Notes {
     id:string;
     createdBy:string;
     timestamp:Date;
-    leadId:string
+    leadId:string;
+    noteType:string
 }

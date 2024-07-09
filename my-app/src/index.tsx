@@ -18,6 +18,7 @@ import { MainProject } from './Component/project/projects/projectMain/mainProjec
 import Nav from './Component/nav/nav.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+console.log('REACT_APP_BRAVERMAN:', process.env.REACT_APP_BRAVERMAN);
 root.render(
   <React.StrictMode>
     <Provider store={store}>

@@ -534,24 +534,27 @@ const currentUser = useSelector((state: { user: { currentUser: { UserEmail: stri
             return;
           }
           console.log(statusOptions);   
-            Swal.fire({
-              title: 'עריכת ליד',
-              html: `
+          Swal.fire({
+            title: 'עריכת ליד',
+            html: `
+              <div>
+                <input id="swal-input1" class="swal2-input" placeholder="שם פרטי" value="${lead.firstName}">
+                <input id="swal-input2" class="swal2-input" placeholder="שם משפחה" value="${lead.lastName}">
+                <input id="swal-input3" class="swal2-input" placeholder="טלפון" value="${lead.phone}">
+                <input id="swal-input4" class="swal2-input" placeholder="אמייל" value="${lead.email}">
+                <input id="swal-input5" class="swal2-input" placeholder="מקור הליד" value="${lead.source}">
+                <input id="swal-input7" class="swal2-input" type="date" placeholder="תאריך פניה אחרונה" value="${formatDateForInput(lead.lastContacted)}">
+                <input id="swal-input8" class="swal2-input" placeholder="שם העסק" value="${lead.businessName}">
+                <input id="swal-input9" class="swal2-input" placeholder="טקסט חופשי" value="${lead.freeText}">
                 <div>
-                  <input id="swal-input1" class="swal2-input" placeholder="שם פרטי" value="${lead.firstName}">
-                  <input id="swal-input2" class="swal2-input" placeholder="שם משפחה" value="${lead.lastName}">
-                  <input id="swal-input3" class="swal2-input" placeholder="טלפון" value="${lead.phone}">
-                  <input id="swal-input4" class="swal2-input" placeholder="אמייל" value="${lead.email}">
-                  <input id="swal-input5" class="swal2-input" placeholder="מקור הליד" value="${lead.source}">
-                  <input id="swal-input7" class="swal2-input" type="date" placeholder="תאריך פניה אחרונה" value="${formatDateForInput(lead.lastContacted)}">
-                  <input id="swal-input8" class="swal2-input" placeholder="שם העסק" value="${lead.businessName}">
-                  <input id="swal-input9" class="swal2-input" placeholder="טקסט חופשי" value="${lead.freeText}">
-                  <div>
-                  <select id="swal-input100" class="swal2-input class={getStatusClass(lead.Status2)}">
-                    ${statusOptions.map ((status) => `<option value="${status.value}" 'selected' : ''}>${status.value}</option>`) }
+                  <select id="swal-input100" class="swal2-input">
+                    ${statusOptions.map((status) => `
+                      <option value="${status.value}" ${status.value === lead.status ? 'selected' : ''}>${status.value}</option>
+                    `).join('')}
                   </select>
-                  </div>
-              `,
+                </div>
+              </div>
+            `,
               focusConfirm: false,
               showCancelButton: true,
               inputAttributes: {

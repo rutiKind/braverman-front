@@ -2,9 +2,13 @@ import axios from 'axios';
 import { Lead } from '../model/leads.model';
 import { Project } from '../model/project.model';
 import { Notes } from '../model/notes.model';
+console.log('API URL:', process.env.REACT_APP_BRAVERMAN);
 
 axios.defaults.baseURL = process.env.REACT_APP_BRAVERMAN;
-const apiUrl = process.env.REACT_APP_BRAVERMAN
+const apiUrl = process.env.REACT_APP_BRAVERMAN;
+
+console.log('Axios baseURL:', axios.defaults.baseURL);
+console.log('apiUrl:', apiUrl);
 const convertDateStringToDateTime = (dateString: string | Date): string => {
   if (dateString instanceof Date) {
     return dateString.toISOString();
@@ -80,7 +84,7 @@ export const addNewNote = async (note: Notes) => {
   };
   try {
     debugger
-    return await axios.post(`${apiUrl}/Note`, projectToConvert);
+    return await axios.post(`${apiUrl}Note`, projectToConvert);
   } catch (error) {
     if (axios.isAxiosError(error)) {
       console.error('Server responded with an error:', error.response?.data);
