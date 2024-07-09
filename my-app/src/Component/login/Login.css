@@ -82,7 +82,7 @@ input::placeholder::placeholder {
     text-align: center;
     color: #002046;
 }
-.login{
+/* .login{
     background-color: #ffffff;
     position:fixed;
     width: 1350px;
@@ -92,7 +92,7 @@ input::placeholder::placeholder {
     gap: 0px;
     border-radius: 15px 15px 15px 15px;
     opacity: 0px;
-} 
+}  */
 
 .ok {
     /* Vector v*/
