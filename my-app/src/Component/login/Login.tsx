@@ -90,7 +90,7 @@ const Login = () => {
   };
 
   return (
-     <div className='l' >
+     <div className='login' >
     <p id='p'>התחברות למערכת</p>
     <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
       <div id='allin'>
