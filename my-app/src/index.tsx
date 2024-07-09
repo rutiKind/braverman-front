@@ -15,7 +15,6 @@ import { Bookkeeping } from './Component/bookkeeping/bookkeeping.component';
 import { NotFound } from './Component/notFound/notFound.component';
 import ProjectsTable from './Component/customers/costumers.component';
 import { MainProject } from './Component/project/projects/projectMain/mainProject.component';
-import Nav from './Component/nav/nav.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -23,8 +22,7 @@ root.render(
     <Provider store={store}>
         <HashRouter>
           <Routes>
-            {/* <Route path="/" element={<Leads />} /> */}
-            <Route path="/" element={<App/>} />
+            <Route path="/" element={<App />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/leads" element={<Leads />} />
@@ -34,15 +32,11 @@ root.render(
             <Route path="/not-found" element={<NotFound />} />
             <Route path="/customers" element={<ProjectsTable />} />
             <Route path="/main-project" element={<MainProject />} />
-            <Route path='/leads' element={<Leads />}></Route>
+            <Route path='/leads' element={<Leads />} />
           </Routes>
         </HashRouter>
     </Provider>
   </React.StrictMode>
 );
 
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
