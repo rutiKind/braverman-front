@@ -60,10 +60,8 @@ const App = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-
-    
     if (!sessionStorage.getItem("userId")) {
-      navigate('/leads');
+      navigate('/login');
     }
   }, [navigate]);
 
