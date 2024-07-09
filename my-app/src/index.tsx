@@ -1,16 +1,46 @@
-import { createRoot } from 'react-dom/client';
-import App from './App';
 import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from './Redux/Store';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import Login from './Component/login/Login';
+import { Dashboard } from './Component/dashboard/dashboard.component';
+import Leads from './Component/leads/leads.component';
+import { Staff } from './Component/staff/staff.component';
+import { Tasks } from './Component/tasks/tasks.component';
+import { Bookkeeping } from './Component/bookkeeping/bookkeeping.component';
+import { NotFound } from './Component/notFound/notFound.component';
+import ProjectsTable from './Component/customers/costumers.component';
+import { MainProject } from './Component/project/projects/projectMain/mainProject.component';
+import Nav from './Component/nav/nav.component';
 
-const root = createRoot(
-  document.getElementById('root') as HTMLElement
-);
-
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App></App>
+    <Provider store={store}>
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/leads" element={<Leads />} />
+            <Route path="/staff" element={<Staff />} />
+            <Route path="/tasks" element={<Tasks />} />
+            <Route path="/bookkeeping" element={<Bookkeeping />} />
+            <Route path="/not-found" element={<NotFound />} />
+            <Route path="/customers" element={<ProjectsTable />} />
+            <Route path="/main-project" element={<MainProject />} />
+          </Routes>
+        </HashRouter>
+    </Provider>
   </React.StrictMode>
 );
+
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

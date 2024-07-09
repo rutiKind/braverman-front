@@ -32,6 +32,7 @@ const Nav = () => {
   }, [type, navigate]);
   return (
     <>
+    <p>dfghj</p>
       <div id='imgandnav'>
         <div className="nav-container">
           <header>
@@ -42,8 +43,7 @@ const Nav = () => {
                   <>
                   <p>{getGreetingMessage()}</p>
                   <li className={`nav-item ${location.pathname.includes('/dashboard') ? 'active' : ''}`}><Link to={'projectStatus'}></Link></li>  
-               </>  
-                  
+               </>     
                 ) :
                 type === "worker" ? (<>
                     <li className={`nav-item ${location.pathname.includes('/dashboard') ? 'active' : ''}`}><Link to={'dashboard'}>דשבורד</Link></li>
