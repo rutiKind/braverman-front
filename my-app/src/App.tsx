@@ -71,7 +71,7 @@ const App = () => {
 
   return (
     <>
-    <Nav></Nav>
+    {/* <Nav></Nav> */}
     <div>ruti</div>
     </>
   );
