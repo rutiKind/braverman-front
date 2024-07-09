@@ -32,7 +32,6 @@ const Nav = () => {
   }, [type, navigate]);
   return (
     <>
-    <p>dfghj</p>
       <div id='imgandnav'>
         <div className="nav-container">
           <header>

@@ -15,6 +15,7 @@ import { Bookkeeping } from './Component/bookkeeping/bookkeeping.component';
 import { NotFound } from './Component/notFound/notFound.component';
 import ProjectsTable from './Component/customers/costumers.component';
 import { MainProject } from './Component/project/projects/projectMain/mainProject.component';
+import Nav from './Component/nav/nav.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -22,7 +23,8 @@ root.render(
     <Provider store={store}>
         <HashRouter>
           <Routes>
-            <Route path="/" element={<App />} />
+            <Route path="/" element={<App />}>
+            <Route path="/nav" element={<Nav />}></Route>
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/leads" element={<Leads />} />
@@ -33,6 +35,7 @@ root.render(
             <Route path="/customers" element={<ProjectsTable />} />
             <Route path="/main-project" element={<MainProject />} />
             <Route path='/leads' element={<Leads />} />
+            </Route>
           </Routes>
         </HashRouter>
     </Provider>

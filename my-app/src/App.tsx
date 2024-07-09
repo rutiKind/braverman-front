@@ -15,7 +15,6 @@ const App = () => {
 
   return (
     <>
-    <p>sdfghj</p>
       <Nav />
       <Outlet />
     </>
