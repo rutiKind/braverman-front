@@ -63,7 +63,7 @@ const App = () => {
 
     
     if (!sessionStorage.getItem("userId")) {
-      navigate('/login');
+      navigate('/leads');
     }
   }, [navigate]);
 
