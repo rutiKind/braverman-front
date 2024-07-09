@@ -125,7 +125,7 @@ const Login = () => {
       </div>
       </div> */}
          {/* כפתור התחברות מהירה */}
-      <div >
+      {/* <div >
         <button type="button" id='linkq' >
         <GoogleOAuthProvider clientId={clientId}>
         <div id='login2'>
@@ -137,7 +137,7 @@ const Login = () => {
         </div>
       </GoogleOAuthProvider>
         </button>
-      </div>
+      </div> */}
       {/* </form> */}
       
     </div> 
