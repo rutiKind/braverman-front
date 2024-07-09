@@ -82,7 +82,7 @@ input::placeholder::placeholder {
     text-align: center;
     color: #002046;
 }
-#l{
+.l{
     background-color: #ffffff;
     position:fixed;
     width: 1350px;
