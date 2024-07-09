@@ -92,7 +92,7 @@ const Login = () => {
   return (
     <div id='l'>
     <p id='p'>התחברות למערכת</p>
-    <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
+    {/* <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
       <div id='allin'>
       <input
         id="username"
@@ -123,11 +123,11 @@ const Login = () => {
           </div>
         </button>
       </div>
-      </div>
+      </div> */}
          {/* כפתור התחברות מהירה */}
       <div >
         <button type="button" id='linkq' >
-        {/* <GoogleOAuthProvider clientId={clientId}>
+        <GoogleOAuthProvider clientId={clientId}>
         <div id='login2'>
           <GoogleLogin
             onSuccess={onSuccess}
@@ -135,10 +135,10 @@ const Login = () => {
           // buttonText="התחברות עם Google"
           />
         </div>
-      </GoogleOAuthProvider> */}
+      </GoogleOAuthProvider>
         </button>
       </div>
-      </form>
+      {/* </form> */}
       
     </div> 
       );
