@@ -70,7 +70,7 @@ const router = createBrowserRouter([
 
 
 const root = createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root')
 );
 
 root.render(
