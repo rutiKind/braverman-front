@@ -90,58 +90,57 @@ const Login = () => {
   };
 
   return (
-    <p>try</p>
-    // <div id='l'>
-    // <p id='p'>התחברות למערכת</p>
-    // <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
-    //   <div id='allin'>
-    //   <input
-    //     id="username"
-    //     placeholder=":הכנס אימייל"
-    //     className='textBox'
-    //     value={UserEmail}
-    //     onChange={(e) => setUserEmail(e.target.value)}
-    //     required
-    //   />
-    //     <div>
-    //       <input
-    //         type='password'
-    //         id="password"
-    //         placeholder=':סיסמא'
-    //         className='textBox'
-    //         value={UserPassword}
-    //         onChange={(e) => setUserPassword(e.target.value)}
-    //         required
-    //       />
-    //     </div>
-    //     <div id='btn'>
-    //     <button type="submit" className='textBox' id="submit">
-    //       <div id='en'>
-    //         <span className='enter'>  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className='ok'>
-    //         <path d="M0.00598005 4.00597L1.90735e-06 20L16 19.998L16.002 18L3.41396 18L20 1.414L18.586 -1.78373e-06L1.99997 16.586L1.99996 3.99999L0.00598005 4.00597Z" fill="#002046" /> 
-    //          </svg> כניסה  </span>
+    <div id='l'>
+    <p id='p'>התחברות למערכת</p>
+    <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
+      <div id='allin'>
+      <input
+        id="username"
+        placeholder=":הכנס אימייל"
+        className='textBox'
+        value={UserEmail}
+        onChange={(e) => setUserEmail(e.target.value)}
+        required
+      />
+        <div>
+          <input
+            type='password'
+            id="password"
+            placeholder=':סיסמא'
+            className='textBox'
+            value={UserPassword}
+            onChange={(e) => setUserPassword(e.target.value)}
+            required
+          />
+        </div>
+        <div id='btn'>
+        <button type="submit" className='textBox' id="submit">
+          <div id='en'>
+            <span className='enter'>  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className='ok'>
+            <path d="M0.00598005 4.00597L1.90735e-06 20L16 19.998L16.002 18L3.41396 18L20 1.414L18.586 -1.78373e-06L1.99997 16.586L1.99996 3.99999L0.00598005 4.00597Z" fill="#002046" /> 
+             </svg> כניסה  </span>
             
-    //       </div>
-    //     </button>
-    //   </div>
-    //   </div>
-        //  {/* כפתור התחברות מהירה */}
-      // <div >
-      //   <button type="button" id='linkq' >
-      //   <GoogleOAuthProvider clientId={clientId}>
-      //   <div id='login2'>
-      //     <GoogleLogin
-      //       onSuccess={onSuccess}
-      //       onError={onFailure}
+          </div>
+        </button>
+      </div>
+      </div>
+         {/* כפתור התחברות מהירה */}
+      <div >
+        <button type="button" id='linkq' >
+        {/* <GoogleOAuthProvider clientId={clientId}>
+        <div id='login2'>
+          <GoogleLogin
+            onSuccess={onSuccess}
+            onError={onFailure}
           // buttonText="התחברות עם Google"
-    //       />
-    //     </div>
-    //   </GoogleOAuthProvider>
-    //     </button>
-    //   </div>
-    //   </form>
+          />
+        </div>
+      </GoogleOAuthProvider> */}
+        </button>
+      </div>
+      </form>
       
-    // </div> 
+    </div> 
       );
       }
       export default Login;
