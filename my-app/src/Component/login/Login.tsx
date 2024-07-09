@@ -90,9 +90,10 @@ const Login = () => {
   };
 
   return (
-    <div id='l'>
-    <p id='p'>התחברות למערכת</p>
-    {/* <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
+     <div id='l'>
+      <p>login</p>
+    {/* <p id='p'>התחברות למערכת</p>
+    <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
       <div id='allin'>
       <input
         id="username"
@@ -137,10 +138,10 @@ const Login = () => {
         </div>
       </GoogleOAuthProvider>
         </button>
-      </div> */}
-      {/* </form> */}
+      </div>
+      </form> */}
       
-    </div> 
+     </div> 
       );
       }
       export default Login;
