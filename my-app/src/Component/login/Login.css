@@ -91,7 +91,7 @@ input::placeholder::placeholder {
     left: 93px;
     gap: 0px;
     border-radius: 15px 15px 15px 15px;
-    /* opacity: 0px; */
+    opacity: 0px;
 }  
 
 .ok {
