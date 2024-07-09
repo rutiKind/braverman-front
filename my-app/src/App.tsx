@@ -56,22 +56,22 @@ import { Routing } from './Routing';
 import store from './Redux/Store';
 
 const App = () => {
-  // const isAuthenticated = sessionStorage.getItem('userId')
-  // const navigate = useNavigate();
+  const isAuthenticated = sessionStorage.getItem('userId')
+  const navigate = useNavigate();
 
-  // useEffect(() => {
+  useEffect(() => {
 
     
-  //   if (!sessionStorage.getItem("userId")) {
-  //     navigate('/Login');
-  //   }
-  // }, [navigate]);
+    if (!sessionStorage.getItem("userId")) {
+      navigate('/login');
+    }
+  }, [navigate]);
 
  
 
   return (
     <>
-    {/* <Nav></Nav> */}
+    <Nav></Nav>
     <div>ruti</div>
     </>
   );

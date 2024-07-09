@@ -23,8 +23,8 @@ root.render(
     <Provider store={store}>
         <HashRouter>
           <Routes>
-            <Route path="/" element={<Leads />} />
-            {/* <Route path="/" element={<App />} /> */}
+            {/* <Route path="/" element={<Leads />} /> */}
+            <Route path="/" element={<App />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/leads" element={<Leads />} />
