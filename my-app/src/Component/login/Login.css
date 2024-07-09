@@ -85,8 +85,8 @@ input::placeholder::placeholder {
  .login{
     background-color: #ffffff;
     position:fixed;
-    /* width: 1350px;
-    height: 600px;
+    width: 1350px;
+    /* height: 600px;
     top: 100px;
     left: 93px;
     gap: 0px;
