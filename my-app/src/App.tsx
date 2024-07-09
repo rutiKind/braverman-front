@@ -72,7 +72,7 @@ const App = () => {
   return (
     <>
     <Nav></Nav>
- <p>sdfghj</p>
+    <div>ruti</div>
     </>
   );
 };
