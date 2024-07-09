@@ -34,6 +34,7 @@ root.render(
             <Route path="/not-found" element={<NotFound />} />
             <Route path="/customers" element={<ProjectsTable />} />
             <Route path="/main-project" element={<MainProject />} />
+            <Route path='login' element={<Login />}></Route>
             <Route path='/leads' element={<Leads />}></Route>
           </Routes>
         </HashRouter>
