@@ -1,8 +1,11 @@
 import axios from 'axios';
 
+axios.defaults.baseURL = process.env.REACT_APP_BRAVERMAN;
+const serviceURL = process.env.REACT_APP_BRAVERMAN;
+
 export const getTaskCategories = async () => {
     try {
-        const response = await axios.get('https://localhost:7119/api/TaskCategory/getAll');
+        const response = await axios.get(`${serviceURL}TaskCategory/getAll`);
         return [...response.data];
     } catch (error) {
         console.error('Error fetching task categories:', error);
@@ -16,7 +19,7 @@ export const addCategory = async (taskCategory: string) => {
 
 
     try {
-        const response=await axios.post(`https://localhost:7119/api/TaskCategory/addTaskCategory`,taskCategory);
+        const response=await axios.post(`${serviceURL}TaskCategory/addTaskCategory`,taskCategory);
         return response.data; 
       } catch (error) {
         console.error('Error adding task category:', error);

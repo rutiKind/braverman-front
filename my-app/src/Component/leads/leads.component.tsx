@@ -147,7 +147,7 @@ const formatDateForInput = (date:any) => {
   return `${year}-${month}-${day}`;
 };
 
-const currentUser = useSelector((state: { user: { currentUser: { UserEmail: string, UserPassword: string, UserId: string, UserTypeId: string, UserTypeName: string, UserFirstName: string, UserLastName: string } } }) => state.user.currentUser);
+// const currentUser = useSelector((state: { user: { currentUser: { UserEmail: string, UserPassword: string, UserId: string, UserTypeId: string, UserTypeName: string, UserFirstName: string, UserLastName: string } } }) => state.user.currentUser);
  const userId= sessionStorage.getItem('userId')  
  const currentUserType=sessionStorage.getItem('userType') 
  console.log(currentUserType);
@@ -525,9 +525,7 @@ const currentUser = useSelector((state: { user: { currentUser: { UserEmail: stri
     })
       }
 
-        const handleEditLead =()=>{
-          console.log(currentUser);
-          
+        const handleEditLead =()=>{          
           const lead = leads.find((l) => l.id === selectedLeadId);
           if (!lead) {
             Swal.fire('שגיאה', 'הליד שנבחר לא נמצא', 'error');
@@ -760,7 +758,7 @@ const currentUser = useSelector((state: { user: { currentUser: { UserEmail: stri
             <span className='add' style={{ fontSize: 15, color: '#636363' }}>המרת ליד ללקוח</span>
           </button>
         )}
-        {currentUser && selectedLeadId && (
+        {  selectedLeadId && (
           <button className="convert-lead-button" onClick={handleEditLead}>
             <GrUpdate className="icon" />
             <span className='add' style={{ fontSize: 15, color: '#636363' }}>עדכון ליד</span>
